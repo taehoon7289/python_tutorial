@@ -141,3 +141,9 @@ count = 0
 for i in range(11):
   count += 1
   print(count)
+
+count = 0
+
+while count == 0:
+  print("탈출!!")
+  break
