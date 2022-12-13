@@ -205,7 +205,9 @@
 # print(counter['blue'])
 # print(counter['green'])
 
-from greedy.prob_1 import test, solution
-
-print(f"{test()} 개")
-print(f"{solution()} 개")
+# from greedy.prob_1 import test, solution
+# print(f"{test()} 개")
+# print(f"{solution()} 개")
+from greedy.prob_2 import solution
+# print(test())
+print(solution())
