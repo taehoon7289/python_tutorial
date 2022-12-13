@@ -147,3 +147,4 @@ count = 0
 while count == 0:
   print("탈출!!")
   break
+
