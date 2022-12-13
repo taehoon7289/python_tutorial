@@ -148,3 +148,67 @@ while count == 0:
   print("탈출!!")
   break
 
+
+def customSum(a=0, b=0):
+  # global count
+  # count = 300
+  print(f"sum 호출됨 {a}, {b}, {count}")
+  return a + b
+
+
+print(customSum(10, 20))
+
+print(customSum(10))
+
+print(customSum(b=10, a=5))
+
+
+def packing():
+  a = 1
+  b = 2
+  c = 3
+  d = 4
+  return a, b, c, d
+
+
+print(packing()[1])
+
+# 람다식 사용 방법
+lambdatemp = lambda a, b: a - b
+
+print(lambdatemp(1, 2))
+
+temptemp = [1, 2, 3, 4]
+
+print(list(map(lambda a: a * 3, temptemp)))
+
+# import 방식도 약간 다름
+from itertools import combinations
+from itertools import product
+from itertools import combinations_with_replacement
+
+data = ['a', 'b', 'c']
+# 조합
+result = list(combinations(data, 2))
+print(result)
+
+# 중복순열
+result = list(product(data, repeat=2))
+print(result)
+
+# 중복조합
+result = list(combinations_with_replacement(data, 2))
+print(result)
+
+from collections import Counter
+
+counter = Counter(
+  ['red', 'red', 'red', "blue", "blue", "blue", "blue", "blue", "green"])
+
+print(counter['red'])
+print(counter['blue'])
+print(counter['green'])
+
+from greedy.test import test
+
+print(test("hello!!!!!!", "world@@@@@@@@2"))
