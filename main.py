@@ -208,6 +208,10 @@
 # from greedy.prob_1 import test, solution
 # print(f"{test()} 개")
 # print(f"{solution()} 개")
-from greedy.prob_2 import solution
+# from greedy.prob_2 import solution
+# print(test())
+# print(solution())
+
+from greedy.prob_3 import solution
 # print(test())
 print(solution())
