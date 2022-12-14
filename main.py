@@ -216,6 +216,6 @@
 # print(test())
 # print(solution())
 
-from greedy.prob_4 import test, solution
-print(test())
+from 구현.prob_1 import test, solution
+# print(test())
 print(solution())
