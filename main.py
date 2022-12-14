@@ -212,6 +212,10 @@
 # print(test())
 # print(solution())
 
-from greedy.prob_3 import solution
+# from greedy.prob_3 import solution
 # print(test())
+# print(solution())
+
+from greedy.prob_4 import test, solution
+print(test())
 print(solution())
