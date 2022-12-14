@@ -216,6 +216,6 @@
 # print(test())
 # print(solution())
 
-from 구현.prob_1 import test, solution
+from 구현.prob_2 import test, solution
 # print(test())
 print(solution())
