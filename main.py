@@ -216,6 +216,102 @@
 # print(test())
 # print(solution())
 
-from 구현.prob_4 import test, solution
-print(test())
-print(solution())
+# stack = []
+# stack.append(1)
+# print(stack)
+# stack.append(2)
+# print(stack)
+# stack.append(3)
+# print(stack)
+# stack.append(4)
+# print(stack)
+# stack.pop()
+# print(stack)
+# stack.pop()
+# print(stack)
+# stack.append(5)
+# print(stack)
+# stack.pop()
+# print(stack[::-1])  # 마지막 부터 출력
+
+# stack = []
+# print(stack.append(1))  # return None
+# print(stack.pop())  # pop 하면 마지막 value return
+
+# from collections import deque
+# # 큐 (순차적으로 의미)
+# queue = deque()
+# queue.append(1)
+# queue.append(2)
+# queue.append(3)
+# print(queue.popleft())
+# print(queue)
+# queue.append(4)
+# print(queue.popleft())
+# print(queue)
+
+# queue.reverse()
+
+# print(queue)
+
+# # 재귀함수 : 자기자신을 호출 recursive function
+# def recursiveFn(n):
+#   if n < 1:
+#     return
+#   print(f"This is recursiveFn : {n:03d}")
+#   recursiveFn(n - 1)
+
+# recursiveFn(100)
+
+# 유클리드 호제법
+# 두 자연수 a,b 에 대해 a>b 일때 a를 b로 나눈 나머지가 r일때,
+# a, b의 최대공약수는 b와 r 의 최대공약수와 같다.
+
+# 192, 162
+
+# 유클리드 호제법을 이용한 재귀함수식
+# def gcdFn(a, b):
+#   r = a % b
+#   if r != 0:
+#     print(f"b : {b}, r: {r}")
+#     return gcdFn(b, r)
+#   return b
+
+# print(gcdFn(192, 162))
+
+# DFS (깊이우선탐색)
+# start
+# 방문처리
+# 이후 인접노드 찾기 (인접노드란? 방문하지 않은 노드 있는지)
+#   인접노드 없으면 끝
+#   인접노드 있으면 인접노드중 하나 start 처리
+
+# row = 5
+# column = 3
+# array = [[0 for i in range(column)] for j in range(row)]
+# print(array)
+# array[0][0] = 1
+# print(array)
+
+# array2 = [[0] * column] * row
+# print(array2)
+# array2[0][0] = 1
+# print(array2)
+
+# BFS(너비우선탐색) -> 큐 사용
+# 인접노드 큐 삽입 후 방문처리(큐에서 꺼내면서 인접노드 탐색)
+
+# nodes = [i for i in range(1, 10)]
+# print(nodes)
+# visited = [False for i in range(1, 10)]
+
+# print(visited)
+# visited[0] = True
+# visited[5] = True
+# print(visited)
+
+# import 탐색.prob_1_sol
+# print(test())
+# print(solution())
+
+# import 탐색.prob_1_sol
