@@ -315,3 +315,5 @@
 # print(solution())
 
 # import 탐색.prob_1_sol
+
+import 탐색.prob_2_sol
