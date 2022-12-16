@@ -319,9 +319,9 @@
 # import 탐색.prob_2_sol
 
 # 정렬
-data = [5, 7, 9, 0, 3, 1, 6, 2, 4, 8]
+# data = [5, 7, 9, 0, 3, 1, 6, 2, 4, 8]
 # 선택정렬 : 지금 리스트에서 가장 작은거 찾아서 가장 앞으로 보냄
-print("before : ", data)
+# print("before : ", data)
 # for i in range(len(data) - 1):
 #   # min = data[i]
 #   minIndex = i
@@ -405,7 +405,7 @@ print("before : ", data)
 
 # 계수정렬
 # 특정한 조건이 부합할때만 사용할수 있음.
-data = [7, 5, 9, 0, 3, 1, 6, 2, 9, 1, 4, 8, 0, 5, 2]
+# data = [7, 5, 9, 0, 3, 1, 6, 2, 9, 1, 4, 8, 0, 5, 2]
 
 # obj = {}
 # for digit in data:
@@ -416,16 +416,18 @@ data = [7, 5, 9, 0, 3, 1, 6, 2, 9, 1, 4, 8, 0, 5, 2]
 #   obj[digit] += 1
 # print(obj)
 
-max = max(data)
-print(max)
-cntArray = [0 for i in range(max + 1)]
+# max = max(data)
+# print(max)
+# cntArray = [0 for i in range(max + 1)]
 
-for digit in data:
-  cntArray[digit] += 1
-print(cntArray)
+# for digit in data:
+#   cntArray[digit] += 1
+# print(cntArray)
 
-result = ""
-for index in range(len(cntArray)):  # 값
-  for i in range(cntArray[index]):  # 횟수
-    result += f"{index}"
-print(result)
+# result = ""
+# for index in range(len(cntArray)):  # 값
+#   for i in range(cntArray[index]):  # 횟수
+#     result += f"{index}"
+# print(result)
+
+import 정렬.prob_1
