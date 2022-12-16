@@ -316,4 +316,116 @@
 
 # import 탐색.prob_1_sol
 
-import 탐색.prob_2_sol
+# import 탐색.prob_2_sol
+
+# 정렬
+data = [5, 7, 9, 0, 3, 1, 6, 2, 4, 8]
+# 선택정렬 : 지금 리스트에서 가장 작은거 찾아서 가장 앞으로 보냄
+print("before : ", data)
+# for i in range(len(data) - 1):
+#   # min = data[i]
+#   minIndex = i
+#   for index in range(i, len(data)):
+#     if data[minIndex] > data[index]:
+#       # min = data[index]
+#       minIndex = index
+#   # data.insert(i, data.pop(minIndex))
+#   # 파이썬 스왑
+#   data[i], data[minIndex] = data[minIndex], data[i]
+# print("after : ", data)
+# 삽입정렬 : 처리되지 않은 데이터를 하나씩 골라 적절한 위치에 삽입한다.
+# 타겟 대상의 왼쪽은 이미 정렬되어 잇다라고 가정한상태로 위치를 정해서 삽입
+
+# for i in range(1, len(data)):
+#   for j in range(i):
+#     # data[i] : 타겟 대상
+#     # data[j] : 이미 정렬된 대상들
+#     print("target : ", data[i])
+#     # print("target index : ", i)
+#     if data[j] < data[i] <= data[j + 1]:
+#       data.insert(j + 1, data.pop(i))
+#       print(f"{j}번째에 {data[j]} 넣음")
+#       print("ing : ", data)
+#       break
+#     elif data[0] > data[i]:
+#       # print("data[0]", data[0])
+#       # print("data[i]", data[1])
+#       data.insert(0, data.pop(i))
+#       print(f"0번째에 {data[0]} 넣음 --")
+#       print("ing : ", data)
+#       break
+
+# print("after :", data)
+
+# for i in range(1, len(data)):
+#   for j in range(i, 0, -1):
+#     # 타겟값에서 왼쪽방향으로 진행
+#     # 타겟 : data[j]
+#     if data[j] < data[j - 1]:
+#       # 스왑
+#       data[j], data[j - 1] = data[j - 1], data[j]
+#       # 스왑하고 또 더 타겟보다 큰게 있을수 있으니까 재 진행
+#     else:
+#       # 타겟보다 큰게 아니면 이미 정렬 된리스트중이 나보다 작은게 없다는 의미
+#       break
+# print("after :", data)
+
+# 퀵정렬
+# 기준데이터를 고르고 큰데이터와 작은 데이터 위치를 바꿈
+# 기준데이터를 기준으로 분할 작업 (재귀함수 사용)
+
+# import time
+
+# def quickSort(start, end):
+#   if start >= end:
+#     return
+#   pivot = start
+#   leftIndex, rightIndex = start + 1, end
+#   print("pivot : ", data[pivot])
+#   while leftIndex <= rightIndex:
+#     time.sleep(1.0)
+#     while leftIndex <= end and data[leftIndex] <= data[pivot]:
+#       leftIndex += 1
+#     while rightIndex > start and data[rightIndex] >= data[pivot]:
+#       rightIndex -= 1
+
+#     if leftIndex > rightIndex:
+#       print("pivot swap", leftIndex, rightIndex)
+#       data[rightIndex], data[pivot] = data[pivot], data[rightIndex]
+#     else:
+#       print("swap : ", data[leftIndex], data[rightIndex])
+#       data[leftIndex], data[rightIndex] = data[rightIndex], data[leftIndex]
+#       print("ing : ", data)
+#   print("분할시 start rightIndex", start, rightIndex)
+#   quickSort(start, rightIndex - 1)
+#   quickSort(rightIndex + 1, end)
+
+# quickSort(0, len(data) - 1)
+# print("after :", data)
+
+# 계수정렬
+# 특정한 조건이 부합할때만 사용할수 있음.
+data = [7, 5, 9, 0, 3, 1, 6, 2, 9, 1, 4, 8, 0, 5, 2]
+
+# obj = {}
+# for digit in data:
+#   # obj[digit] = 0
+#   print(obj.get(digit))
+#   if obj.get(digit) == None:
+#     obj[digit] = 0
+#   obj[digit] += 1
+# print(obj)
+
+max = max(data)
+print(max)
+cntArray = [0 for i in range(max + 1)]
+
+for digit in data:
+  cntArray[digit] += 1
+print(cntArray)
+
+result = ""
+for index in range(len(cntArray)):  # 값
+  for i in range(cntArray[index]):  # 횟수
+    result += f"{index}"
+print(result)
