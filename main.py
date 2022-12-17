@@ -319,8 +319,8 @@
 # import 탐색.prob_2_sol
 
 # 정렬
-# data = [5, 7, 9, 0, 3, 1, 6, 2, 4, 8]
-# 선택정렬 : 지금 리스트에서 가장 작은거 찾아서 가장 앞으로 보냄
+data = [5, 7, 9, 0, 3, 1, 6, 2, 4, 8]
+# # 선택정렬 : 지금 리스트에서 가장 작은거 찾아서 가장 앞으로 보냄
 # print("before : ", data)
 # for i in range(len(data) - 1):
 #   # min = data[i]
@@ -383,7 +383,6 @@
 #   leftIndex, rightIndex = start + 1, end
 #   print("pivot : ", data[pivot])
 #   while leftIndex <= rightIndex:
-#     time.sleep(1.0)
 #     while leftIndex <= end and data[leftIndex] <= data[pivot]:
 #       leftIndex += 1
 #     while rightIndex > start and data[rightIndex] >= data[pivot]:
@@ -430,4 +429,58 @@
 #     result += f"{index}"
 # print(result)
 
-import 정렬.prob_1
+# import 정렬.prob_1
+
+# data = [15, 213, 3, 10, 345, 313, 6, 0, 12, 334, 45, 39, 324, 64]
+# 선택정렬 : 지금 리스트에서 가장 작은거 찾아서 가장 앞으로 보냄
+# print("before : ", data)
+# for i in range(1, len(data)):
+#   for j in range(i):
+#     # data[i] : 타겟 대상
+#     # data[j] : 이미 정렬된 대상들
+#     if data[j] < data[i] <= data[j + 1]:
+#       data.insert(j + 1, data.pop(i))
+#       break
+#     elif data[0] > data[i]:
+#       data.insert(0, data.pop(i))
+#       break
+# print("after :", data)
+
+# def quickSort(start, end):
+#   if start >= end:
+#     return
+#   pivot = start
+#   leftIndex, rightIndex = start + 1, end
+#   while leftIndex <= rightIndex:
+#     while leftIndex <= end and data[leftIndex] <= data[pivot]:
+#       leftIndex += 1
+#     while rightIndex > start and data[rightIndex] >= data[pivot]:
+#       rightIndex -= 1
+
+#     if leftIndex > rightIndex:
+#       data[rightIndex], data[pivot] = data[pivot], data[rightIndex]
+#     else:
+#       data[leftIndex], data[rightIndex] = data[rightIndex], data[leftIndex]
+#   quickSort(start, rightIndex - 1)
+#   quickSort(rightIndex + 1, end)
+
+# data = [15, 213, 3, 10, 345, 313, 6, 0, 12, 334, 45, 39, 324, 64]
+# print("before : ", data)
+# quickSort(0, len(data) - 1)
+# print("after :", data)
+
+# n = 100
+# print([i for i in range(n + 1) if i % 2 != 0])
+
+# 최소공배수, 최대공약수 외우기
+a, b = 10, 32
+x, y = a, b
+while y:
+  x, y = y, x%y
+  print(x, y)
+print("gcd : ", x)
+print("lcm :", (a * b) // x)
+
+# 이진탐색
+
+
