@@ -476,11 +476,12 @@ data = [5, 7, 9, 0, 3, 1, 6, 2, 4, 8]
 a, b = 10, 32
 x, y = a, b
 while y:
-  x, y = y, x%y
+  x, y = y, x % y
   print(x, y)
 print("gcd : ", x)
 print("lcm :", (a * b) // x)
 
-# 이진탐색
-
-
+# 비트연산자
+init = 3
+for i in range(10):
+  print("i :: ", init << i)
