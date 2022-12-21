@@ -482,6 +482,67 @@ print("gcd : ", x)
 print("lcm :", (a * b) // x)
 
 # 비트연산자
-init = 3
-for i in range(10):
-  print("i :: ", init << i)
+# init = 3
+# for i in range(10):
+#   print("i :: ", init << i)
+
+# print([0,1,2,3,4,5,5].count(4))
+# print('가나다라마바사다다다'.count('다'))
+
+
+# array = [0]
+# array += [33]
+# array += [66]
+# array += [8]
+# array.append([11,2,3,4])
+# print(array)
+
+# x = 12
+# d = 2
+# while d <= x:
+#   if x % d == 0:
+#     x //= d
+#     print("???", d)
+#   else:
+#     d += 1
+#     print("###", d)
+
+
+# n = 12
+# nums = set([])
+# d = 2
+# while n<=d:
+#   if n % d == 0:
+#     n //= d
+#     nums.add(d)
+#     print(d)
+#   else:
+#     d += 1
+#   print("n", n)
+# print(nums)
+# print('???')
+
+# n = 145
+# d = 2
+# while d <= n:
+#   if n % d == 0:
+#     n //= d
+#     print(d)
+#   else:
+#     d += 1
+
+# temp = '1 -2 -3 -4 -5 -6 -7 -8'
+# print(sum(list(map(int, temp.split()))))
+
+# d = 'da'
+# spell = 'bcda'
+# print(d in spell)
+
+print(type('1'))
+print(type(1))
+print(type(1.0))
+
+a = [0, 'f']
+a[0] = 'd'
+a[1] = 4
+print(a)
