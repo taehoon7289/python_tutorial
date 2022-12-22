@@ -538,11 +538,11 @@ print("lcm :", (a * b) // x)
 # spell = 'bcda'
 # print(d in spell)
 
-print(type('1'))
-print(type(1))
-print(type(1.0))
+# print(type('1'))
+# print(type(1))
+# print(type(1.0))
 
-a = [0, 'f']
-a[0] = 'd'
-a[1] = 4
-print(a)
+# a = [0, 'f']
+# a[0] = 'd'
+# a[1] = 4
+# print(a)
