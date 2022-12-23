@@ -546,3 +546,29 @@ print("lcm :", (a * b) // x)
 # a[0] = 'd'
 # a[1] = 4
 # print(a)
+
+# array = [1,2,3,4,5,6,7]
+# print(array[0:len(array)-2:-1])
+# print(array[-1])
+# print(array[0:3:-3])
+# print(array[:3:-2])
+
+# a = [0,0,0]
+# print(a[-1])
+
+# temp = "adcdefg"
+# print(temp*2)
+
+# # print(int("3-7+88"))
+
+# a = [1,2,3,5]
+# b = [0,3,6,7,8,9,1,2,3,4]
+# # print(set(a) - set(b))
+# print(b.index(3))
+
+# temp = 'temp'
+# print('flag', 'tm' in temp)
+
+temp = [[0,0,0,0], [1,1,1,1],[2,2,2,2]]
+print(len(temp))
+print(len(temp[0]))
