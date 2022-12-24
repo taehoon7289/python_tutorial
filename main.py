@@ -489,7 +489,6 @@ print("lcm :", (a * b) // x)
 # print([0,1,2,3,4,5,5].count(4))
 # print('가나다라마바사다다다'.count('다'))
 
-
 # array = [0]
 # array += [33]
 # array += [66]
@@ -506,7 +505,6 @@ print("lcm :", (a * b) // x)
 #   else:
 #     d += 1
 #     print("###", d)
-
 
 # n = 12
 # nums = set([])
@@ -569,6 +567,23 @@ print("lcm :", (a * b) // x)
 # temp = 'temp'
 # print('flag', 'tm' in temp)
 
-temp = [[0,0,0,0], [1,1,1,1],[2,2,2,2]]
-print(len(temp))
-print(len(temp[0]))
+# temp = [[0,0,0,0], [1,1,1,1],[2,2,2,2]]
+# print(len(temp))
+# print(len(temp[0]))
+
+# 순서유지하면서 중복제거후
+temp = "kimtaehoon"
+result = ""
+for c in temp:
+  if c not in result:
+    result += c
+print(result)
+
+# a = ['a']
+# temp = ['ee','c','b','aa', 'd', 'ee']
+# result = []
+# for t in temp:
+#   print(t)
+#   if t not in result:
+#     result.append(t)
+# print(result)
