@@ -572,12 +572,12 @@ print("lcm :", (a * b) // x)
 # print(len(temp[0]))
 
 # 순서유지하면서 중복제거후
-temp = "kimtaehoon"
-result = ""
-for c in temp:
-  if c not in result:
-    result += c
-print(result)
+# temp = "kimtaehoon"
+# result = ""
+# for c in temp:
+#   if c not in result:
+#     result += c
+# print(result)
 
 # a = ['a']
 # temp = ['ee','c','b','aa', 'd', 'ee']
@@ -587,3 +587,32 @@ print(result)
 #   if t not in result:
 #     result.append(t)
 # print(result)
+
+
+# from collections import Counter
+# temp = ['c','b','aa', 'd', 'ee', 'ee', 'a', 'a', 'a', 'a', 'a']
+# temp2 = ['ee','c','b','aa', 'd', 'a', 'v', 'v', 'v']
+# print(Counter(temp) - Counter(temp2))
+# # print(Counter(temp))
+# # print(Counter(temp).most_common(2))
+
+# ttt = 'abcdefg'
+# a = ['aa', 'bb', 'cccc']
+# print(Counter(a))
+# obj = {}
+# obj['1'] =1
+# obj['2'] =2
+# obj['3'] =3
+# obj['4'] =4
+# obj[4] =44
+
+# if 4 in obj:
+#   print('on')
+# else:
+#   print('off')
+
+from collections import Counter
+
+temp = ['111', '22', '111']
+print(Counter(temp))
+print(temp.count('1'))
