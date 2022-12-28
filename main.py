@@ -613,6 +613,15 @@ print("lcm :", (a * b) // x)
 
 from collections import Counter
 
-temp = ['111', '22', '111']
-print(Counter(temp))
-print(temp.count('1'))
+# temp = ['111', '22', '111']
+# print(Counter(temp))
+# print(temp.count('1'))
+
+
+array = [i for i in range(10)]
+for a in range(len(array)):
+  print(a)
+print("---")
+for a in range(len(array)-1,-1,-1):
+  print(a)
+    
