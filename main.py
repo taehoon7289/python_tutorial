@@ -618,10 +618,33 @@ from collections import Counter
 # print(temp.count('1'))
 
 
+# array = [i for i in range(10)]
+# for a in range(len(array)):
+#   # print(a)
+#   array.remove(array[a])
+#   print(array)
+# # print("---")
+# # for a in range(len(array)-1,-1,-1):
+# #   print(a)
+
+
+
+print("-------------------------")
 array = [i for i in range(10)]
-for a in range(len(array)):
-  print(a)
-print("---")
-for a in range(len(array)-1,-1,-1):
-  print(a)
-    
+print(array)
+# for a in range(len(array)):
+#   # print(a)
+#   array.remove(array[a])
+#   print(array)
+
+
+
+# for a in array:
+#   array.remove(a)
+#   print(array)
+# print(array)
+
+while array:
+  array.remove(array[0])
+  print(array)
+print(array)
