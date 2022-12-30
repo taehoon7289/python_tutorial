@@ -648,3 +648,4 @@ while array:
   array.remove(array[0])
   print(array)
 print(array)
+
