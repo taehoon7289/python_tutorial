@@ -644,8 +644,8 @@ print(array)
 #   print(array)
 # print(array)
 
-while array:
-  array.remove(array[0])
-  print(array)
-print(array)
+# while array:
+#   array.remove(array[0])
+#   print(array)
+# print(array)
 
