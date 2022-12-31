@@ -649,3 +649,15 @@ print(array)
 #   print(array)
 # print(array)
 
+# temp = ['3', '34', '35', '32', '30', '31', '234', '2']
+# temp = [3,34,35,32,30,31,234,2]
+# temp.sort(reverse = True)
+# print(temp)
+# print(list(map(min, enumerate(temp, start = 1))))
+
+# print(list(map(lambda s: s*4, temp)))
+# print(sorted(temp, reverse = True))
+temp = [1,2,3,4]
+# print(temp[3:])
+for i, v in enumerate(reversed(temp)):
+  print(i, v)
