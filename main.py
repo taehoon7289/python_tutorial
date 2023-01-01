@@ -661,3 +661,13 @@ temp = [1,2,3,4]
 # print(temp[3:])
 for i, v in enumerate(reversed(temp)):
   print(i, v)
+
+# 유클리드호제법 다시
+a, b = 100, 50
+x, y = a, b
+while y:
+  x, y = y, x % y
+  print(x, y)
+print("최대공약수: ", x)
+print("최소공배수: ", a * b // x)
+
