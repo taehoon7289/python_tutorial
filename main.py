@@ -657,17 +657,87 @@ print(array)
 
 # print(list(map(lambda s: s*4, temp)))
 # print(sorted(temp, reverse = True))
-temp = [1,2,3,4]
-# print(temp[3:])
-for i, v in enumerate(reversed(temp)):
-  print(i, v)
+# temp = [1,2,3,4]
+# # print(temp[3:])
+# for i, v in enumerate(reversed(temp)):
+#   print(i, v)
 
-# 유클리드호제법 다시
-a, b = 100, 50
-x, y = a, b
-while y:
-  x, y = y, x % y
-  print(x, y)
-print("최대공약수: ", x)
-print("최소공배수: ", a * b // x)
+# # 유클리드호제법 다시
+# a, b = 100, 50
+# x, y = a, b
+# while y:
+#   x, y = y, x % y
+#   print(x, y)
+# print("최대공약수: ", x)
+# print("최소공배수: ", a * b // x)
 
+# temp = []
+# print(temp + [1] + [2])
+# temp = [1,23,4]
+# print(temp + [3])
+
+from heapq import heappop, heappush
+array = []
+for v in [[5.5,4,5,3,1,2],[4,11,4,0,2],[10,4,0,4,2], [0,0,2,1,2], [0,-1,2,1,2], [-1,-1,2,1,2]]:
+  heappush(array, v)
+print(array)
+while array:
+  print(heappop(array))
+
+
+from collections import deque
+from heapq import heappush, heappop
+def solution(alp, cop, problems):
+    answer = 0
+    max_alp = max([p[0] for p in problems])
+    max_cop = max([p[1] for p in problems])
+    results = []
+    tasks = deque()
+    temps = search_problems(alp, cop, problems, max_alp, max_cop)
+    while temps:
+        prop = heappop(temps)
+        tasks.append([alp + prop[3], cop + prop[4], prop[5]])
+    while tasks:
+        value = tasks.popleft()
+        v_alp, v_cop, v_t = value
+        print('tasks len :', len(tasks))
+        print('v_alp, v_cop, v_t', v_alp, v_cop, v_t)
+        if v_alp >= max_alp and v_cop >= max_cop:
+            results.append([v_alp, v_alp, v_t])
+            print('results', [v_alp, v_alp, v_t])
+        else:
+            result_props = search_problems(v_alp, v_cop, problems, max_alp, max_cop)
+            while result_props:
+                prop = heappop(result_props)
+                print('tasks append', [v_alp + prop[3], v_cop + prop[4], v_t + prop[5]])
+                tasks.append([v_alp + prop[3], v_cop + prop[4], v_t + prop[5]])
+    if results:
+        return results[0][2]
+    return answer
+
+def search_problems(alp, cop, problems, max_alp, max_cop):
+    need_alp, need_cop = max_alp - alp, max_cop - cop
+    avail_props = [p for p in problems if p[0] <= alp and p[1] <= cop]
+    avail_props.append([0,0,1,0,1])
+    avail_props.append([0,0,0,1,1])
+    result_props = []
+    if need_alp > 0 and need_cop > 0:
+        for prob in avail_props:
+            min_alp, min_cop, rwd_alp, rwd_cop, t = prob
+            temp = [int((rwd_alp+rwd_cop) // t), min_alp, min_cop, rwd_alp, rwd_cop, t]
+            heappush(result_props, temp)
+    elif need_alp > 0:
+        for prob in avail_props:
+            min_alp, min_cop, rwd_alp, rwd_cop, t = prob
+            temp = [int(rwd_alp // t), min_alp, min_cop, rwd_alp, rwd_cop, t]
+            heappush(result_props, temp)
+    elif need_cop > 0:
+        for prob in avail_props:
+            min_alp, min_cop, rwd_alp, rwd_cop, t = prob
+            temp = [int(min_cop // t), min_alp, min_cop, rwd_alp, rwd_cop, t]
+            heappush(result_props, temp)
+    else:
+        print('else alp, cop', alp, cop)
+    return result_props
+        
+solution(10,10,[[10,15,2,1,2],[20,20,3,3,4]])
