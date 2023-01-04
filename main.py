@@ -829,49 +829,84 @@ print(array)
 # dp = [[float('inf')]*(5 + 1) for _ in range(10 + 1)]
 # print(dp)
 
-from collections import deque
-def solution(n, paths, gates, summits):
-    answer = []
-    queue = deque()
-    paths = list(map(lambda p: [*p, 0], paths))
-    for g in gates:
-        # [intensity, 지나온 n queue, 지나온 w queue, visited_summit]
-        queue.append([0, [g], [], False, paths])
-    results = []
+# from collections import deque
+# def solution(n, paths, gates, summits):
+#     answer = []
+#     queue = deque()
+#     paths = list(map(lambda p: [*p, 0], paths))
+#     for g in gates:
+#         # [intensity, 지나온 n queue, 지나온 w queue, visited_summit]
+#         queue.append([0, [g], [], False, paths])
+#     results = []
     
-    while queue:
-        val = queue.popleft()
-        start_node = val[1][0]
-        now_node = val[1][-1]
-        pts = val[4]
-        # print('pts', pts)
-        for i, p in enumerate(pts):
+#     while queue:
+#         val = queue.popleft()
+#         start_node = val[1][0]
+#         now_node = val[1][-1]
+#         pts = val[4]
+#         # print('pts', pts)
+#         for i, p in enumerate(pts):
             
-            if (p[0] == now_node or p[1] == now_node) and p[3] < 3:
-                end_node = p[1]
-                if p[1] == now_node:
-                    end_node = p[0]
+#             if (p[0] == now_node or p[1] == now_node) and p[3] < 3:
+#                 end_node = p[1]
+#                 if p[1] == now_node:
+#                     end_node = p[0]
                 
-                if end_node == start_node and val[3]:
-                    # 끝이라면
-                    pts[i][3] += 1
-                    results.append([max(val[0], p[2]), val[1] + [end_node], val[2] + [p[2]], val[3], pts])
+#                 if end_node == start_node and val[3]:
+#                     # 끝이라면
+#                     pts[i][3] += 1
+#                     results.append([max(val[0], p[2]), val[1] + [end_node], val[2] + [p[2]], val[3], pts])
                     
-                    continue
-                if not val[3]:
-                    # 아직 정상 도착 안함
-                    if end_node not in gates:
-                        if end_node in summits:
-                            val[3] = True
-                        pts[i][3] += 1
-                        queue.append([max(val[0], p[2]), val[1] + [end_node], val[2] + [p[2]], val[3], pts])
-                else:
-                    # 정상 들렸다옴
-                    if end_node not in gates and end_node not in summits:
-                        pts[i][3] += 1
-                        queue.append([max(val[0], p[2]), val[1] + [end_node], val[2] + [p[2]], val[3], pts])
+#                     continue
+#                 if not val[3]:
+#                     # 아직 정상 도착 안함
+#                     if end_node not in gates:
+#                         if end_node in summits:
+#                             val[3] = True
+#                         pts[i][3] += 1
+#                         queue.append([max(val[0], p[2]), val[1] + [end_node], val[2] + [p[2]], val[3], pts])
+#                 else:
+#                     # 정상 들렸다옴
+#                     if end_node not in gates and end_node not in summits:
+#                         pts[i][3] += 1
+#                         queue.append([max(val[0], p[2]), val[1] + [end_node], val[2] + [p[2]], val[3], pts])
             
-    print(results)
+#     print(results)
 
 
-solution(6,	[[1, 2, 3], [2, 3, 5], [2, 4, 2], [2, 5, 4], [3, 4, 4], [4, 5, 3], [4, 6, 1], [5, 6, 1]],	[1, 3],	[5])
+# solution(6,	[[1, 2, 3], [2, 3, 5], [2, 4, 2], [2, 5, 4], [3, 4, 4], [4, 5, 3], [4, 6, 1], [5, 6, 1]],	[1, 3],	[5])
+
+
+# temps = [[1,2,5],[1,2,2],[1,2,3],[1,2,1],[1,2,4]]
+# result = []
+# for temp in temps:
+#   print(''.join(temp))
+#   if temp[0:2] not in result:
+#     result += [temp]
+# print('test', result)
+
+# from collections import deque
+# def solution(bridge_length, weight, truck_weights):
+#     # 1초당 1 length 씩 이동
+#     answer = 0
+#     arrive_arr = deque()
+#     bridge_arr = deque()
+#     start_queue = deque(truck_weights)
+#     while start_queue or bridge_arr:
+        
+#         if bridge_arr and bridge_arr[0][0] >= bridge_length:
+#             arrive_arr.append(bridge_arr.popleft())
+#         for t in bridge_arr:
+#             t[0] += 1
+#         now_weight = sum(map(lambda a: a[1], bridge_arr))
+#         print('now_weight', now_weight)
+#         if now_weight + start_queue[0] <= weight:
+#             bridge_arr.append([1, start_queue.popleft()])
+        
+#         answer += 1
+    
+#     return answer
+# solution(2,	10,	[7,4,5,6])
+sizes = [[60, 50], [30, 70], [60, 30], [80, 40]]
+# print(list(min(s) for s in sizes))
+print(sum(sizes, [])) # 배열 flat처리
