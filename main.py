@@ -906,7 +906,46 @@ print(array)
 #         answer += 1
     
 #     return answer
-# solution(2,	10,	[7,4,5,6])
-sizes = [[60, 50], [30, 70], [60, 30], [80, 40]]
-# print(list(min(s) for s in sizes))
-print(sum(sizes, [])) # 배열 flat처리
+# # solution(2,	10,	[7,4,5,6])
+# sizes = [[60, 50], [30, 70], [60, 30], [80, 40]]
+# # print(list(min(s) for s in sizes))
+# print(sum(sizes, [])) # 배열 flat처리
+
+# node = dict({
+#   1: {
+#     'l': [],
+#     'r': [],  
+#     },
+#   })
+
+# temp = [2,3]
+
+# for i in temp:
+  
+#   if 2 >= i:
+#     n = node.copy()
+#     if i % 3 == 0:
+#       n[1]['l'].append(n)
+#     else:
+#       n[1]['r'].append(n)
+#     break
+#   d = 2
+#   while i > d:
+#     if i % d == 0:
+#       n = node.copy()
+#       n[i] = i
+#       if i % 3 == 0:
+#         n[i]['l'].append(n)
+#       else:
+#         n[i]['r'].append(n)
+#       break
+#     else:
+#       d += 1
+
+# print(node)
+# print(node[1]['r'])
+# print(node[1]['r'][0])
+# print(node[1]['r'][0][1])
+# print(node[1]['r'][0][1]['r'])
+
+print('helloworld')
