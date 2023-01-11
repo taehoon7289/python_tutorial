@@ -948,4 +948,15 @@ print(array)
 # print(node[1]['r'][0][1])
 # print(node[1]['r'][0][1]['r'])
 
-print('helloworld')
+# print('helloworld')
+
+word = 'helloworld'
+if 'h' in word:
+  print('yes')
+else:
+  print('no')
+
+print(word.upper())
+print(word)
+print(word[0].lower())
+print(word[1].upper())
