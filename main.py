@@ -960,3 +960,7 @@ print(word.upper())
 print(word)
 print(word[0].lower())
 print(word[1].upper())
+
+temp = [1,2,3,4,5,6,7]
+print(list(reversed(temp)))
+# print('okok')
