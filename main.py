@@ -964,3 +964,12 @@ print(word[1].upper())
 temp = [1,2,3,4,5,6,7]
 print(list(reversed(temp)))
 # print('okok')
+
+n = 20
+while n > 5:
+  for i in range(n):
+    print(i)
+    if i % 2 == 0:
+      n -= 1
+  print('1', n)
+print('2', n)
