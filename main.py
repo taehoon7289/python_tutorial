@@ -948,28 +948,38 @@ print(array)
 # print(node[1]['r'][0][1])
 # print(node[1]['r'][0][1]['r'])
 
-# print('helloworld')
+# # print('helloworld')
 
-word = 'helloworld'
-if 'h' in word:
-  print('yes')
-else:
-  print('no')
+# word = 'helloworld'
+# if 'h' in word:
+#   print('yes')
+# else:
+#   print('no')
 
-print(word.upper())
-print(word)
-print(word[0].lower())
-print(word[1].upper())
+# print(word.upper())
+# print(word)
+# print(word[0].lower())
+# print(word[1].upper())
 
-temp = [1,2,3,4,5,6,7]
-print(list(reversed(temp)))
-# print('okok')
+# temp = [1,2,3,4,5,6,7]
+# print(list(reversed(temp)))
+# # print('okok')
 
-n = 20
-while n > 5:
-  for i in range(n):
-    print(i)
-    if i % 2 == 0:
-      n -= 1
-  print('1', n)
-print('2', n)
+# n = 20
+# while n > 5:
+#   for i in range(n):
+#     print(i)
+#     if i % 2 == 0:
+#       n -= 1
+#   print('1', n)
+# print('2', n)
+
+from collections import defaultdict
+
+temps = [3,4,2,1,5,6,7,8,9,7,8,3,4,3,1]
+obj = defaultdict(int)
+
+for i in temps:
+  obj[i] += 1
+print(obj)
+print(obj[3])
