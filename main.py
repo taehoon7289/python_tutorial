@@ -974,12 +974,23 @@ print(array)
 #   print('1', n)
 # print('2', n)
 
-from collections import defaultdict
+# from collections import defaultdict
 
-temps = [3,4,2,1,5,6,7,8,9,7,8,3,4,3,1]
-obj = defaultdict(int)
+# temps = [3,4,2,1,5,6,7,8,9,7,8,3,4,3,1]
+# obj = defaultdict(int)
 
-for i in temps:
-  obj[i] += 1
-print(obj)
-print(obj[3])
+# for i in temps:
+#   obj[i] += 1
+# print(obj)
+# print(obj[3])
+
+answer = 0
+n = int(input())
+a = list(map(int, input().split()))
+b = list(map(int, input().split()))
+a.sort()
+b.sort(reverse=True)
+for i in range(n):
+    a_value, b_value = a[i], b[i]
+    answer += (a_value * b_value)
+print(answer)
